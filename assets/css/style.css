@@ -253,14 +253,65 @@ section {
     justify-content: space-around;
 }
 
+.trainer-1 {
+    background-image: url("../images/trainer-1.jpg");
+    background-size: cover;
+  }
+
+.trainer-2 {
+    background-image: url("../images/trainer-2.jpg");
+    background-size: cover; 
+}
+
+.trainer-3 {
+    background-image: url("../images/trainer-3.jpg");
+    background-size: cover;
+}
+
 .trainer {
-    margin: 0 auto 20px auto;
+    margin: 20px;
     background: #024e76;
     color: #fce138;
     flex: 1
 }
-.trainer img {
+.trainer-img {
     width: 100%;
+    min-height: 300px;
+    display: flex;
+    padding: 15px;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .trainer-img::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(252, 225, 56, 0.3), #024e76);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .trainer-img h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 28px;
+    margin-bottom: 5px;
+    top: 200px;
+    transition: .6s
+  }
+  
+  .trainer-img h4 {
+    position: relative;
+    z-index: 1;
+    font-size: 22px;
+    top: 200px;
+    transition: .6s
+  }
+
+  .trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+    top: 0px;
 }
 
 .trainer-bio {
